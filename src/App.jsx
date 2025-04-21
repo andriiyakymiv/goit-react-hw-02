@@ -4,6 +4,7 @@ import './App.css';
 import Feedback from './components/feedback/Feedback';
 import Options from "./components/options/Options";
 import Header from "./components/header/Header";
+import Notification from './components/notification/Notification';
 
 function App() {
   const initialState = { good: 0, neutral: 0, bad: 0 };
@@ -31,13 +32,12 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Options
-        totalFeedback={totalPoints}
-        updateFeedback={updateFeedback}
-        resetNotes={resetNotes}
-      />
-      <Feedback {...notes} totalPoints={totalPoints} positive={positive} />
+      <div>
+        <Header />
+        <Options totalFeedback={totalPoints} updateFeedback={updateFeedback} resetNotes={resetNotes} />
+        {totalPoints === 0 ? (<Notification />) : (<Feedback {...notes} totalPoints={totalPoints} positive={positive} />)}
+      </div>
+      
     </>
   );
 };
