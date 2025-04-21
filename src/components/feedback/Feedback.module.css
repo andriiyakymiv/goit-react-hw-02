@@ -1,12 +1,16 @@
-/* .feedbackList {
+.feedback__list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
+    font-size: 21px;
 }
 
-.change {
-    color: #010101;
-    transform: scale(1.5);
-} */
+.feedback__vote {
+    display: flex;
+    gap: 10px;
+
+}
+
+.feedback__statistic {
+    display: flex;
+    gap: 10px;
+}

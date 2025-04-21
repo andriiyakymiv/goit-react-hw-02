@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    font-size: 30px;
+    color: #212121;
+}
+
+.paragraph {
+    display: flex;
+    font-size: 21px;
+    color: #273F4F;
+}

@@ -3,28 +3,30 @@ import styles from "./Feedback.module.css";
 
 const Feedback = ({ good, neutral, bad, totalPoints, positive }) => {
   return (
-    <div className={styles.feedbackList}>
-          
+    <div className={styles.feedback__list}>
+      <div className={styles.feedback__vote}>
         <p className={clsx(styles.feedbackItem, good > 0 && styles.change)}>
-            Good:{good}
+          Good - <span>{good}</span>
         </p>
           
         <p className={clsx(styles.feedbackItem, neutral > 0 && styles.change)}>
-            Neutral:{neutral}
+          Neutral - <span>{neutral}</span>
         </p>
           
         <p className={clsx(styles.feedbackItem, bad > 0 && styles.change)}>
-            Bad:{bad}
-          </p>
-
+          Bad - <span>{bad}</span>
+        </p>
+      </div>
+        
+      <div className={styles.feedback__statistic}>
         <p className={clsx(styles.feedbackItem, totalPoints > 0 && styles.change)}>
-            Total:{totalPoints}
+          Total - <span>{totalPoints}</span>
         </p>
           
         <p className={clsx(styles.feedbackItem, positive > 0 && styles.change)}>
-            Positive:{positive}%
+          Positive - <span>{positive}%</span>
         </p>
-          
+      </div>
     </div>
   );
 };
