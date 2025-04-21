@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import './App.css';
 import Feedback from './components/feedback/Feedback';
 import Options from "./components/options/Options";
+import Header from "./components/header/Header";
 
 function App() {
   const initialState = { good: 0, neutral: 0, bad: 0 };
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Feedback />
       <Options
         totalFeedback={totalPoints}
