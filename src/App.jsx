@@ -32,12 +32,12 @@ function App() {
   return (
     <>
       <Header />
-      <Feedback />
       <Options
         totalFeedback={totalPoints}
         updateFeedback={updateFeedback}
         resetNotes={resetNotes}
       />
+      <Feedback {...notes} totalPoints={totalPoints} positive={positive} />
     </>
   );
 };
